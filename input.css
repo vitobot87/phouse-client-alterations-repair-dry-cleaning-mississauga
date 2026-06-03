@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base{html{scroll-behavior:smooth;color-scheme:light dark}body{@apply m-0 overflow-x-hidden bg-thread-50 text-ink font-sans antialiased dark:bg-[#100d0b] dark:text-thread-50}section{@apply scroll-mt-28 py-12}}
-@layer components{.wrap{@apply mx-auto w-[min(1120px,calc(100%-32px))]}.nav{@apply sticky top-0 z-30 border-b border-thread-900/10 bg-thread-50/85 backdrop-blur-xl dark:border-white/10 dark:bg-[#100d0b]/85}.surface{@apply rounded-[30px] border border-thread-900/10 bg-white shadow-soft dark:border-white/10 dark:bg-[#18120f]}.panel{@apply rounded-[34px] border border-thread-900/10 bg-gradient-to-br from-white to-thread-100 shadow-soft dark:border-white/10 dark:from-[#1a130f] dark:to-[#271b14]}.eyebrow{@apply text-xs font-black uppercase tracking-[.18em] text-thread-500 dark:text-thread-300}.h1{@apply font-serif text-[clamp(2.35rem,5vw,5rem)] leading-[.96] tracking-[-.055em]}.h2{@apply font-serif text-[clamp(1.8rem,3vw,3.2rem)] leading-tight tracking-[-.035em]}.lead{@apply text-lg leading-8 text-thread-900/70 dark:text-thread-100/75}.btn{@apply inline-flex items-center justify-center rounded-full border px-5 py-3 font-black no-underline transition hover:-translate-y-0.5 hover:shadow-lg}.btn-primary{@apply border-thread-700 bg-thread-700 text-white dark:border-thread-200 dark:bg-thread-100 dark:text-thread-900}.btn-ghost{@apply border-thread-900/15 bg-white/50 dark:border-white/15 dark:bg-white/5}.card{@apply rounded-3xl border border-thread-900/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5}.input{@apply w-full rounded-2xl border border-thread-900/10 bg-white px-4 py-3 text-ink shadow-sm placeholder:text-thread-900/35 focus:border-thread-500 focus:ring-thread-500 dark:border-white/15 dark:bg-white/10 dark:text-white dark:placeholder:text-white/40}}
-@media(max-width:520px){.wrap{width:calc(100% - 28px)}}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  a { @apply transition hover:text-rust; }
+  details { @apply border-t border-ink/15 py-5 dark:border-linen/15; }
+  details:last-child { @apply border-b; }
+  summary { @apply cursor-pointer font-serif text-2xl; }
+  details p { @apply mt-3 text-ink/65 dark:text-linen/65; }
+}
+@layer components {
+  .tag { @apply rounded-full border border-rust/30 bg-rust/10 px-3 py-1 text-rust dark:border-gold/30 dark:bg-gold/10 dark:text-gold; }
+  .big-cta { @apply inline-flex items-center justify-center rounded-full bg-rust px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-white shadow-[0_18px_45px_rgba(126,63,42,.22)] hover:bg-thread hover:text-white; }
+  .big-cta.secondary { @apply border border-ink/15 bg-transparent text-ink shadow-none hover:border-rust hover:bg-rust hover:text-white dark:border-linen/20 dark:text-linen; }
+  .ticket { @apply grid grid-cols-[2.5rem_1fr] gap-x-4 rounded-[1.4rem] border border-ink/10 bg-linen/70 p-4 dark:border-linen/10 dark:bg-white/5; }
+  .ticket span { @apply row-span-2 grid h-10 w-10 place-items-center rounded-full bg-gold font-serif font-black text-ink; }
+  .ticket b { @apply text-lg; }
+  .ticket small { @apply mt-1 text-sm leading-5 text-ink/60 dark:text-linen/60; }
+  .kicker { @apply text-xs font-black uppercase tracking-[.28em] text-rust; }
+  .section-title { @apply mt-3 font-serif text-4xl leading-[.95] tracking-[-.04em] sm:text-5xl; }
+  .service-row { @apply grid gap-3 py-7 sm:grid-cols-[.42fr_.58fr]; }
+  .service-row h3 { @apply font-serif text-3xl leading-none tracking-[-.03em]; }
+  .service-row p { @apply text-lg leading-7 text-ink/65 dark:text-linen/65; }
+  .note-card { @apply rounded-[2rem] border border-linen/15 bg-white/10 p-6; }
+  .note-card b { @apply font-serif text-2xl; }
+  .note-card p { @apply mt-3 text-linen/70; }
+  .proof-line { @apply rounded-[1.5rem] border border-ink/10 bg-white/55 p-5 text-lg dark:border-linen/10 dark:bg-white/5; }
+}
