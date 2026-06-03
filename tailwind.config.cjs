@@ -1,0 +1,1 @@
+module.exports={content:['./index.html','./main.js'],darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],serif:['Georgia','Cambria','serif']},colors:{thread:{50:'#fbf8f3',100:'#f3ede2',200:'#e4d6c2',300:'#cbb392',500:'#8f6846',700:'#5c3e2c',900:'#281b14'},ink:'#1d1714'},boxShadow:{soft:'0 24px 70px rgba(40,27,20,.10)'}}},plugins:[]}

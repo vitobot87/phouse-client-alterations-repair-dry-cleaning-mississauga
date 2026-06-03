@@ -1,0 +1,1 @@
+const t=localStorage.getItem('theme')||'system';const d=matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t==='system'&&d))document.documentElement.classList.add('dark');document.documentElement.dataset.theme=t;
