@@ -1,1 +1,1 @@
-{"scripts":{"build":"node build.mjs"},"devDependencies":{"tailwindcss":"3.4.17"}}
+{"type":"module","scripts":{"build":"node build.mjs"},"devDependencies":{}}

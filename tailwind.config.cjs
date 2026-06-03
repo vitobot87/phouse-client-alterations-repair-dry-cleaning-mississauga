@@ -1,1 +1,0 @@
-module.exports={content:['./index.html','./main.js'],darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],serif:['Georgia','Cambria','serif']},colors:{linen:'#f7f0e4',cream:'#fffaf1',ink:'#201713',thread:'#4a3329',rust:'#9b4f32',gold:'#d9aa5f'}}},plugins:[]}
